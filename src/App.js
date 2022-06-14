@@ -1,24 +1,13 @@
 import logo from "./logo.png";
 import "./App.css";
+import Nav from "./components/Nav.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          welcome to <b>la caja magicalizadora</b> project
-        </p>
-        <a
-          className="App-link"
-          href="https://www.instagram.com/lacajamagicalizadora/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          learn more
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <div className="bg-indigo-500 w-full h-screen"></div>
+    </>
   );
 }
 
