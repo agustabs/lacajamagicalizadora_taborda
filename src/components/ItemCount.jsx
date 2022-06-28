@@ -1,12 +1,11 @@
 import { useState } from "react";
-import corderoImage from "../assets/corderopieldelobo.png";
 import Swal from "sweetalert2";
 
-function ItemCount({ stock }) {
+function ItemCount(props) {
   const [num, setNum] = useState(0);
 
   const sumar = () => {
-    if (num < stock) {
+    if (num < props.stock) {
       setNum(num + 1);
     } else {
       Swal.fire({
@@ -32,14 +31,13 @@ function ItemCount({ stock }) {
     <>
       <div className="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
         <img
-          src={corderoImage}
+          //fix images and fix cards flow
+          src={props.img}
           alt="botella de vino cordero piel de lobo"
           class="h-auto w-full"
         />
         <div className="p-5">
-          <p className="text-medium mb-5 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, vel?
-          </p>
+          <p className="text-medium mb-5 text-gray-700">{props.name}</p>
           <span className="w-full text-medium mb-5 text-gray-600">
             Quantity: {num}
           </span>
