@@ -6,9 +6,12 @@ function ItemListContainer() {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
-    fetch("data.json")
-      .then((resp) => resp.json())
-      .then((data) => setInfo(data));
+    setTimeout(() => {
+      fetch("data.json")
+        .then((resp) => resp.json())
+        .then((data) => setInfo(data));
+    }, 2000);
+    console.log("Check for setTimeout");
   }, []);
 
   return (

@@ -59,6 +59,12 @@ function ItemCount(props) {
           >
             Clear
           </button>
+          <button
+            // onClick=
+            className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
+          >
+            See more
+          </button>
         </div>
       </div>
     </>
