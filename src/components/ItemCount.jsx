@@ -27,9 +27,20 @@ function ItemCount(props) {
     setNum(0);
   };
 
+  const seeDetails = () => {
+    Swal.fire({
+      title: props.wineCellar,
+      text: "$" + props.price,
+      imageUrl: "../assets/wineCellar.jpg",
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: "Bodega",
+    });
+  };
+
   return (
     <>
-      <div className="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
+      <div className="m-5 max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
         <img
           //fix images and fix cards flow
           src={props.img}
@@ -60,7 +71,7 @@ function ItemCount(props) {
             Clear
           </button>
           <button
-            // onClick=
+            onClick={seeDetails}
             className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
           >
             See more

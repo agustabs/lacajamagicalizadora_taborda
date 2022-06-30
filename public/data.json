@@ -1,7 +1,7 @@
 [
     {
         "name": "Cordero Piel de Lobo",
-        "wineCellar": "Mosquita Muerta Wines",
+        "wineCellar": "Bodega \n Mosquita Muerta Wines",
         "type": "Malbec",
         "price": "650",
         "id": 1,
@@ -10,7 +10,7 @@
     },
     {
         "name": "Perro Callejero",
-        "wineCellar": "Mosquita Muerta Wines",
+        "wineCellar": "Bodega \n Mosquita Muerta Wines",
         "type": "Blend de Malbec",
         "price": "1000",
         "id": 2,
@@ -19,7 +19,7 @@
     },
     {
         "name": "Sapo de Otro Poso",
-        "wineCellar": "Mosquita Muerta Wines",
+        "wineCellar": "Bodega \n Mosquita Muerta Wines",
         "type": "Malbec",
         "price": "1500",
         "id": 3,
@@ -28,7 +28,7 @@
     },
     {
         "name": "La Linda",
-        "wineCellar": "Luigi Bosca",
+        "wineCellar": "Bodega \n Luigi Bosca",
         "type": "Cabernet Sauvignon",
         "price": "800",
         "id": 4,
@@ -37,7 +37,7 @@
     },
     {
         "name": "Alambrado",
-        "wineCellar": "Santa Julia",
+        "wineCellar": "Bodega \n Santa Julia",
         "type": "Malbec",
         "price": "900",
         "id": 5,

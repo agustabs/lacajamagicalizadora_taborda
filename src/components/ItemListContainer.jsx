@@ -15,11 +15,23 @@ function ItemListContainer() {
   }, []);
 
   return (
-    <div className="w-full h-full bg-indigo-900">
-      <h1 className="text-white md:flex items-center justify-center">
-        Aquí iría el catalogo.
+    <div className="w-full h-full bg-indigo-900 grid grid-cols-3">
+      <h1
+        className="text-white text-2xl md:flex items-center justify-center"
+        id="vinos"
+      >
+        Catalogo de vinos
       </h1>
-      {info && info.map((i) => <ItemCount name={i.name} stock={i.stock} />)}
+      {info &&
+        info.map((i) => (
+          <ItemCount
+            name={i.name}
+            stock={i.stock}
+            img={i.img}
+            wineCellar={i.wineCellar}
+            price={i.price}
+          />
+        ))}
     </div>
   );
 }

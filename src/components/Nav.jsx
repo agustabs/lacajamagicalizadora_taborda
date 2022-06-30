@@ -16,7 +16,7 @@ function Nav() {
           <li className="md:ml-8 text-xl ">
             <a
               className="text-gray-800 hover:text-gray-400 duration-500"
-              href="#"
+              href="#vinos"
             >
               Vinos
             </a>
