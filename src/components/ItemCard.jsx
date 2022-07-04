@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-function ItemCount(props) {
+function ItemCard(props) {
   const [num, setNum] = useState(0);
 
   const sumar = () => {
@@ -10,9 +10,9 @@ function ItemCount(props) {
     } else {
       Swal.fire({
         title: "Whoops",
-        text: "This item is out of stock.",
+        text: "Has alcanzado el máximo de unidades disponibles.",
         icon: "error",
-        confirmButtonText: "Back to catalogue",
+        confirmButtonText: "Volver al catalogo",
       });
     }
   };
@@ -42,7 +42,6 @@ function ItemCount(props) {
     <>
       <div className="m-5 max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
         <img
-          //fix images and fix cards flow
           src={props.img}
           alt="botella de vino cordero piel de lobo"
           class="h-auto w-full"
@@ -50,31 +49,31 @@ function ItemCount(props) {
         <div className="p-5">
           <p className="text-medium mb-5 text-gray-700">{props.name}</p>
           <span className="w-full text-medium mb-5 text-gray-600">
-            Quantity: {num}
+            Cantidad: {num}
           </span>
           <button
             onClick={sumar}
             className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
           >
-            Add
+            Agregar
           </button>
           <button
             onClick={restar}
             className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
           >
-            Remove
+            Restar
           </button>
           <button
             onClick={clear}
             className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
           >
-            Clear
+            Limpiar todo
           </button>
           <button
             onClick={seeDetails}
             className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
           >
-            See more
+            Más información
           </button>
         </div>
       </div>
@@ -82,4 +81,4 @@ function ItemCount(props) {
   );
 }
 
-export default ItemCount;
+export default ItemCard;
