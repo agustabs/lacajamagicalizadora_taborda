@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 function ItemCard(props) {
   const [num, setNum] = useState(0);
@@ -25,17 +26,6 @@ function ItemCard(props) {
 
   const clear = () => {
     setNum(0);
-  };
-
-  const seeDetails = () => {
-    Swal.fire({
-      title: props.wineCellar,
-      text: "$" + props.price,
-      imageUrl: "../assets/wineCellar.jpg",
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: "Bodega",
-    });
   };
 
   return (
@@ -69,12 +59,11 @@ function ItemCard(props) {
           >
             Limpiar todo
           </button>
-          <button
-            onClick={seeDetails}
-            className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
-          >
-            Más información
-          </button>
+          <Link to="/cartdetails" state={{ props }}>
+            <button className="w-full rounded-md bg-indigo-600  m-1 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
+              Más información
+            </button>
+          </Link>
         </div>
       </div>
     </>
